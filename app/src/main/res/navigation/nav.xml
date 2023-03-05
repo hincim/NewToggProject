@@ -34,6 +34,10 @@
         tools:layout="@layout/fragment_animation" >
         <action
             android:id="@+id/action_animationFragment_to_toggMenuFragment"
-            app:destination="@id/toggMenuFragment" />
+            app:destination="@id/toggMenuFragment"
+            app:enterAnim="@anim/nav_default_pop_enter_anim"
+            app:exitAnim="@anim/nav_default_pop_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
     </fragment>
 </navigation>

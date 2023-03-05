@@ -44,5 +44,5 @@ class AnimationFragment : Fragment(R.layout.fragment_animation) {
         super.onDestroy()
         fragmentBinding = null
     }
-    
+
 }
