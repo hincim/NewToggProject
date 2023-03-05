@@ -7,19 +7,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.BounceInterpolator
 import androidx.navigation.fragment.findNavController
-import com.hakaninc.newtoggproject.databinding.FragmentAnimationBinding
-import com.hakaninc.newtoggproject.databinding.FragmentToggMenuBinding
-import kotlinx.coroutines.CoroutineScope
+import com.hakaninc.newtoggproject.databinding.FragmentAnimation2Binding
 
-class AnimationFragment : Fragment(R.layout.fragment_animation) {
-        private var fragmentBinding: FragmentAnimationBinding ?= null
+class AnimationFragment2 : Fragment(R.layout.fragment_animation2) {
+
+    private var fragmentBinding: FragmentAnimation2Binding ?= null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        val binding = FragmentAnimationBinding.bind(view)
+        val binding = FragmentAnimation2Binding.bind(view)
         fragmentBinding = binding
 
         ObjectAnimator.ofFloat(binding.imageView5,"rotationY",0.0f,-360.0f).apply {
@@ -33,16 +30,14 @@ class AnimationFragment : Fragment(R.layout.fragment_animation) {
             }
 
             override fun onFinish() {
-                findNavController().navigate(AnimationFragmentDirections.actionAnimationFragmentToToggMenuFragment())
+                findNavController().navigate(AnimationFragment2Directions.actionAnimationFragmentToToggMenuFragment())
             }
 
         }.start()
     }
 
-
     override fun onDestroy() {
         super.onDestroy()
         fragmentBinding = null
     }
-
 }
