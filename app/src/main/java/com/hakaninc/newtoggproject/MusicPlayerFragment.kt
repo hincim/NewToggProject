@@ -30,10 +30,4 @@ class MusicPlayerFragment : Fragment(R.layout.fragment_music_player) {
         val binding = FragmentMusicPlayerBinding.bind(view)
         fragmentBinding = binding
     }
-
-    override fun onDestroy() {
-        super.onDestroy()
-
-        fragmentBinding = null
-    }
 }

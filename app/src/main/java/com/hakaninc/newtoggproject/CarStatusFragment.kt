@@ -45,9 +45,4 @@ class CarStatusFragment : Fragment(R.layout.fragment_car_status) {
 
         }.start()
     }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        fragmentBinding = null
-    }
 }
